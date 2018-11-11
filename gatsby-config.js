@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Octave App',
+    description : "L'application mobile qui vous fait gagner un temps précieux dans votre cuisine et pour vos courses",
+    keywords : "Famille, Manger sain, Equilibre alimentaire, Application"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -23,6 +25,12 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

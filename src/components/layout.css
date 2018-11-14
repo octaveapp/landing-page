@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Maitree:500,600|Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:600|Work+Sans');
 
 body {
   font-family: 'Work Sans', sans-serif;
+  font-size: 1.6rem;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Maitree', serif;
+  font-family: 'Josefin Slab', serif;
   font-weight: 600;
-  text-align: center;
 }
 
 h3 {
   margin: 3rem 0;
+  text-align: center;
 }
 
-p {
-  margin-bottom: 3rem;
+section,
+footer {
+  margin-top: 5rem;
 }

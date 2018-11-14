@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Iphone from '../../images/iphonex-mockup.png'
-import Octave from '../../images/octave-screen.png'
 
 const Root = styled.div`
   position: relative;
@@ -29,6 +28,5 @@ const Root = styled.div`
 export default ({ videoName }) => (
   <Root>
     <img className="mockup" src={Iphone} alt="IphoneX" />
-    <img className="screen" src={Octave} alt="Octave" />
   </Root>
 )

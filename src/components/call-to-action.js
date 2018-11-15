@@ -19,7 +19,7 @@ const Button = styled.a`
   }
 `
 export default ({ children, green }) => (
-  <Button green={green} href="/signup">
+  <Button green={green} href="signup">
     {children}
   </Button>
 )

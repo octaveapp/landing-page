@@ -21,7 +21,12 @@ export default () => (
   <Footer className="grid-12">
     <div className="col-1" />
     <div className="col-4">
-      <img style={{ marginBottom: '3rem' }} className="logo" src={OctaveLogo} />
+      <img
+        style={{ marginBottom: '3rem' }}
+        className="logo"
+        src={OctaveLogo}
+        alt="Octave logo"
+      />
       <p style={{ marginBottom: '3rem' }}>
         © Octave 2018 - tous droits réservés
       </p>
@@ -39,11 +44,11 @@ export default () => (
       <br />
       <a href="/team">L’équipe Octave</a>
       <br />
-      <a href="/signup">Inscription</a>
+      <a href="signup">Inscription</a>
       <br />
       <a href="mailto:contact@octaveapp.fr">Contact</a>
       <br />
-      <a href="">Politique de confidentialité</a>
+      <a href="#">Politique de confidentialité</a>
     </div>
     <div className="col-1" />
   </Footer>

@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Section = styled.section``
+const Section = styled.section`
+  background-color: #fff;
+`
 
 export default ({ children }) => (
   <Section className="grid-12">

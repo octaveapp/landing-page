@@ -7,8 +7,11 @@ import CallToAction from './call-to-action'
 const Header = styled.header`
   background-color: #6cc566;
   padding: 2rem 0 2rem 0;
-  .octave-logo {
-    width: 20rem;
+  .octave-logo-link {
+    text-decoration: none;
+    .octave-logo {
+      width: 20rem;
+    }
   }
   .subscribe-container {
     text-align: right;
@@ -24,7 +27,9 @@ export default ({ siteTitle, hideCallToAction = false }) => (
       <div className="col-1" />
       <div className="col-6">
         <h1>
-          <img className="octave-logo" src={OctaveLogo} alt={siteTitle} />
+          <a href="/" className="octave-logo-link">
+            <img className="octave-logo" src={OctaveLogo} alt={siteTitle} />
+          </a>
         </h1>
       </div>
       <div className="col-4 subscribe-container">

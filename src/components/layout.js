@@ -32,7 +32,19 @@ const Layout = ({ children }) => (
               { name: 'keywords', content: keywords },
             ]}
           >
-            <html lang="en" />
+            <html lang="fr" />
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
+            />
+            <script>
+              {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126067793');`}
+            </script>
           </Helmet>
           <Header siteTitle={title} />
           {children}

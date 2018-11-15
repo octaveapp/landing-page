@@ -4,7 +4,7 @@ import OctaveLogo from '../../images/octave-logo.png'
 
 const Footer = styled.footer`
   background-color: #373f51;
-  padding: 5rem 0 20rem 0;
+  padding: 5rem 0 15rem 0;
   color: #fff;
   .links {
     text-align: right;
@@ -35,13 +35,13 @@ export default () => (
       </p>
     </div>
     <div className="col-6 links">
-      <a href="">Accueil</a>
+      <a href="/">Accueil</a>
       <br />
-      <a href="">L’équipe Octave</a>
+      <a href="/team">L’équipe Octave</a>
       <br />
-      <a href="">Inscription</a>
+      <a href="/signup">Inscription</a>
       <br />
-      <a href="">Contact</a>
+      <a href="mailto:contact@octaveapp.fr">Contact</a>
       <br />
       <a href="">Politique de confidentialité</a>
     </div>

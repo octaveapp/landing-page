@@ -8,6 +8,7 @@ const PriceContainer = styled.div`
   text-align: center;
   padding: 0 7rem;
   .blue-block {
+    font-size: 2.2rem;
     padding: 1rem 3rem;
     color: #fff;
     background-color: #008dd5;
@@ -26,7 +27,10 @@ const PriceContainer = styled.div`
       border: 0.2rem solid #008dd5;
       border-top: 0;
       border-radius: 0 0 0.5rem 0.5rem;
-      padding: 1rem;
+      padding: 1.5rem;
+      p {
+        margin: 2rem 0;
+      }
       ul {
         padding-left: 0;
         list-style: none;

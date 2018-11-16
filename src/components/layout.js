@@ -5,8 +5,9 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Footer from '../components/footer'
-import './knacss.css'
-import './layout.css'
+import '../components/commons/styles/knacss.css'
+import '../components/commons/styles/layout.css'
+import '../components/commons/styles/octave-font.css'
 
 const Layout = ({ children }) => (
   <StaticQuery

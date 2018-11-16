@@ -4,8 +4,6 @@ import Section from '../section'
 import ImageTitleItem from './image-title-item'
 import { Oli } from '../commons/octave-item-list'
 import IphoneX from '../../images/iphonex.png'
-import CalendarIcon from '../../images/Icon-calendar.svg'
-import CartIcon from '../../images/Icon-cart.svg'
 
 export default () => (
   <Section>
@@ -33,8 +31,7 @@ export default () => (
       <div className="col-1">
         <ul>
           <ImageTitleItem
-            icon={CalendarIcon}
-            alt="Calendrier"
+            iconName="calendar"
             title="Planifier vos repas en un clin d’oeil"
           >
             Avant de faire vos courses, vous choisissez vos repas en quelques
@@ -42,19 +39,14 @@ export default () => (
             vos goûts, besoins, envies et contraintes. Vous sélectionnez ce que
             vous voulez manger en veillant à l'équilibre de votre alimentation.
           </ImageTitleItem>
-          <ImageTitleItem
-            icon={CartIcon}
-            alt="Caddie"
-            title="Acheter les bons produits"
-          >
+          <ImageTitleItem iconName="cart" title="Acheter les bons produits">
             Octave génère votre liste de courses en fonction des recettes et
             quantités nécessaires. Vous finalisez cette liste en sélectionnant
             les produits que vous préférez. Enfin si votre magasin favori
             propose le drive ou la livraison, Octave passe votre commande.
           </ImageTitleItem>
           <ImageTitleItem
-            icon={CartIcon}
-            alt="Batteur"
+            iconName="cooking"
             title="Cuisiner en toute sérénité"
             selected
           >

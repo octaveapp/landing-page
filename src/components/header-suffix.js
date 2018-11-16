@@ -2,12 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 import IphoneX from '../images/iphonex.png'
+import Pattern from '../images/bg-pattern-2.png'
 import CallToAction from './call-to-action'
 
 const Root = styled.div`
   margin-bottom: 30rem;
   padding-bottom: 5rem;
-  background-color: #6cc566;
+  background: #6cc566 url('${Pattern}')  no-repeat bottom left;
+  background-size: 30%;
   text-align: center;
   color: white;
   z-index: 1;

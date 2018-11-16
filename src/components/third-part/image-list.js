@@ -10,20 +10,31 @@ const Root = styled.div`
   }
 `
 
+const Ul = styled.ul`
+  list-style: none;
+  li {
+    margin-bottom: 3.5rem;
+  }
+`
+
 export default ({ img, alt, children, alignRight }) => {
-  const elALignedToLeft = [Image(img, alt), UnorderedList(children)]
+  const elALignedToLeft = [
+    Image(img, alt),
+    <div className="col-1" />,
+    UnorderedList(children),
+  ]
   const els = alignRight ? elALignedToLeft.reverse() : elALignedToLeft
-  return <Root className="grid-10 has-gutter">{els}</Root>
+  return <Root className="grid-10">{els}</Root>
 }
 
 const Image = (img, alt) => (
-  <div className="image-container col-4">
+  <div className="image-container col-3">
     <img src={img} alt={alt} />
   </div>
 )
 
 const UnorderedList = children => (
   <div className="col-6">
-    <ul style={{ listStyle: 'none' }}>{children}</ul>
+    <Ul>{children}</Ul>
   </div>
 )

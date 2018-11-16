@@ -3,7 +3,9 @@ import Section from '../section'
 
 import ImageList from './image-list'
 import { Oli, RedDot, BlueDot } from '../commons/octave-item-list'
-import Pasta from '../../images/pasta.jpg'
+import Feature1 from '../../images/feature-usage-1.jpg'
+import Feature2 from '../../images/feature-usage-2.jpg'
+import Feature3 from '../../images/feature-usage-3.jpg'
 
 export default () => (
   <Section>
@@ -20,7 +22,7 @@ export default () => (
       </div>
       <div className="col-1" />
     </div>
-    <ImageList img={Pasta} alt="Pâte tomate">
+    <ImageList img={Feature1} alt="Pâte tomate">
       <Oli>
         Organisation souple des repas avec soit un planning hebdomadaire, soit
         une simple liste de repas
@@ -38,7 +40,7 @@ export default () => (
         la validation ou d’autres propositions de recettes
       </Oli>
     </ImageList>
-    <ImageList img={Pasta} alt="Pâte tomate" alignRight>
+    <ImageList img={Feature2} alt="Pâte tomate" alignRight>
       <Oli Icon={RedDot}>
         Connexion aux principales plateformes de courses en ligne afin de
         commander plus rapidement et simplement
@@ -56,7 +58,7 @@ export default () => (
         pour gérer la totalité de vos courses via Octave
       </Oli>
     </ImageList>
-    <ImageList img={Pasta} alt="Pâte tomate">
+    <ImageList img={Feature3} alt="Pâte tomate">
       <Oli Icon={BlueDot}>
         Recettes disponibles dans l'application avec les étapes pas à pas
         expliquées simplement et clairement

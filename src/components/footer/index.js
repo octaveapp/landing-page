@@ -8,7 +8,9 @@ const Footer = styled.footer`
   color: #fff;
   .links {
     text-align: right;
+    line-height: 3rem;
     a {
+      text-decoration: none;
       color: #fff;
     }
   }

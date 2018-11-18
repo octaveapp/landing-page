@@ -9,12 +9,13 @@ const Button = styled.a`
   cursor: pointer;
   text-decoration: none;
   background-color: ${props => (props.green ? '#fff' : '#008DD5')};
-  border: 1px solid ${props => (props.green ? '#6CC566' : '#008DD5')};
+  border: 3px solid ${props => (props.green ? '#6CC566' : '#008DD5')};
   color: ${props => (props.green ? '#6CC566' : '#fff')}!important;
   font-weight: 600;
   &:hover {
-    background-color: #bce4b9;
-    color: white;
+    background-color: ${props => (props.green ? '#6CC566' : '#fff')};
+    border: 3px solid ${props => (props.green ? '#fff' : '#008DD5')};
+    color: ${props => (props.green ? '#fff' : '#008DD5')} !important;
     text-decoration: none;
   }
 `

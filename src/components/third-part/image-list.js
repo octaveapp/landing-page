@@ -13,16 +13,12 @@ const Root = styled.div`
 const Ul = styled.ul`
   list-style: none;
   li {
-    margin-bottom: 3.5rem;
+    margin-bottom: 3.7rem;
   }
 `
 
 export default ({ img, alt, children, alignRight }) => {
-  const elALignedToLeft = [
-    Image(img, alt),
-    <div className="col-1" />,
-    UnorderedList(children),
-  ]
+  const elALignedToLeft = [Image(img, alt), UnorderedList(children)]
   const els = alignRight ? elALignedToLeft.reverse() : elALignedToLeft
   return <Root className="grid-10">{els}</Root>
 }
@@ -34,7 +30,7 @@ const Image = (img, alt) => (
 )
 
 const UnorderedList = children => (
-  <div className="col-6">
+  <div className="col-7">
     <Ul>{children}</Ul>
   </div>
 )

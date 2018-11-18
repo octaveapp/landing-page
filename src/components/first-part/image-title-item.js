@@ -58,7 +58,7 @@ export default ({ iconName, title, children, selected }) => (
       <div className="col-1">
         <div className="wrapper">
           <div className="icon-container">
-            <span class={'icon-' + iconName} />
+            <span className={'icon-' + iconName} />
           </div>
           <div className="border">&nbsp;</div>
         </div>

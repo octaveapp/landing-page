@@ -8,6 +8,7 @@ import CallToAction from './call-to-action'
 const Root = styled.div`
   margin-bottom: 30rem;
   padding-bottom: 5rem;
+  min-height: 50vh;
   background: #6cc566 url('${Pattern}')  no-repeat bottom left;
   background-size: 30%;
   text-align: center;

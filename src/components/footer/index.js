@@ -50,7 +50,7 @@ export default () => (
       <br />
       <a href="mailto:contact@octaveapp.fr">Contact</a>
       <br />
-      <a href="#">Politique de confidentialité</a>
+      <a href="confidentiality">Politique de confidentialité</a>
     </div>
     <div className="col-1" />
   </Footer>

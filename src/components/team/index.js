@@ -2,10 +2,30 @@ import React from 'react'
 import Section from '../section'
 import styled from 'styled-components'
 
-const Placeholder = styled.div`
-  background-color: gray;
-  border-radius: 50%;
+import Gerald from '../../images/gerald.jpg'
+import Ag from '../../images/ag.jpg'
+import Mathieu from '../../images/mathieu.jpg'
+import CallToAction from '../call-to-action'
+
+const Col = styled.div`
+  text-align: center;
+  .firstname {
+    color: #6cc566;
+    font-family: 'Josefin Slab', serif;
+  }
 `
+
+const SignUpRow = styled.div`
+  text-align: center;
+  margin-top: 7rem;
+`
+const TeamMember = ({ avatar, firstname, job }) => (
+  <Col className="col-3">
+    <img src={avatar} alt="Avatar des fondateurs" />
+    <p className="firstname">{firstname}</p>
+    <p>{job}</p>
+  </Col>
+)
 
 export default () => (
   <Section>
@@ -21,18 +41,19 @@ export default () => (
       </div>
       <div className="col-1" />
     </div>
-    <div className="grid-10 has-gutter">
-      <div className="col-2">
-        <Placeholder />
-      </div>
-      <div className="col-2" />
-      <div className="col-2">
-        <Placeholder />
-      </div>
-      <div className="col-2" />
-      <div className="col-2">
-        <Placeholder />
-      </div>
+    <div className="grid-9 has-gutter">
+      <TeamMember avatar={Gerald} firstname="Gérald" job="Co-fondateur" />
+      <TeamMember avatar={Mathieu} firstname="Mathieu" job="Co-fondateur" />
+      <TeamMember
+        avatar={Ag}
+        firstname="Anne-Gaëlle"
+        job="Diététicienne-nutritionniste"
+      />
     </div>
+    <SignUpRow className="auto-grid">
+      <div className="col-1">
+        <CallToAction green>Contactez-nous</CallToAction>
+      </div>
+    </SignUpRow>
   </Section>
 )

@@ -6,7 +6,6 @@ import { Oli, Check } from '../commons/octave-item-list'
 
 const PriceContainer = styled.div`
   text-align: center;
-  padding: 0 7rem;
   .blue-block {
     font-size: 2.2rem;
     padding: 1rem 3rem;
@@ -40,6 +39,9 @@ const PriceContainer = styled.div`
       }
     }
   }
+  @media screen and (min-width: 768px) {
+    padding: 0 7rem;
+  }
 `
 
 export default ({ className }) => (
@@ -51,9 +53,9 @@ export default ({ className }) => (
       très abordable couvert par les économies réalisés grâce à des courses
       mieux maîtrisées.
     </Paragraph>
-    <PriceContainer className="grid-10">
-      <div className="col-3" />
-      <div className="col-4">
+    <PriceContainer className="grid-12 has-gutter">
+      <div className="col-3-small-2" />
+      <div className="col-6-small-8">
         <p className="blue-block">
           2 semaines d’essai
           <br />
@@ -80,7 +82,7 @@ export default ({ className }) => (
           </div>
         </div>
       </div>
-      <div className="col-3" />
+      <div className="col-3-small-2" />
     </PriceContainer>
   </Section>
 )

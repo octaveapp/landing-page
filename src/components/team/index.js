@@ -6,12 +6,16 @@ import Gerald from '../../images/gerald.jpg'
 import Ag from '../../images/ag.jpg'
 import Mathieu from '../../images/mathieu.jpg'
 import CallToAction from '../call-to-action'
+import Paragraph from '../commons/paragraph'
 
 const Col = styled.div`
   text-align: center;
   .firstname {
     color: #6cc566;
     font-family: 'Josefin Slab', serif;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 5rem;
   }
 `
 
@@ -20,7 +24,7 @@ const SignUpRow = styled.div`
   margin-top: 7rem;
 `
 const TeamMember = ({ avatar, firstname, job }) => (
-  <Col className="col-3">
+  <Col className="col-4-small-all">
     <img src={avatar} alt="Avatar des fondateurs" />
     <p className="firstname">{firstname}</p>
     <p>{job}</p>
@@ -30,18 +34,12 @@ const TeamMember = ({ avatar, firstname, job }) => (
 export default () => (
   <Section>
     <h3>Une équipe de passionnés à votre service</h3>
-    <div className="grid-10">
-      <div className="col-1" />
-      <div className="col-8">
-        <p style={{ 'text-align': 'center', marginBottom: '5rem' }}>
-          Octave est né de la fusion de nos passions : <br />
-          cuisiner pour ceux que nous aimons et utiliser la technologie pour
-          changer le monde
-        </p>
-      </div>
-      <div className="col-1" />
-    </div>
-    <div className="grid-9 has-gutter">
+    <Paragraph>
+      Octave est né de la fusion de nos passions : <br />
+      cuisiner pour ceux que nous aimons et utiliser la technologie pour changer
+      le monde
+    </Paragraph>
+    <div className="grid-12 has-gutter">
       <TeamMember avatar={Gerald} firstname="Gérald" job="Co-fondateur" />
       <TeamMember avatar={Mathieu} firstname="Mathieu" job="Co-fondateur" />
       <TeamMember

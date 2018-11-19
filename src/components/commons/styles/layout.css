@@ -46,6 +46,9 @@ footer {
   [class*='-small-10'] {
     grid-column: auto/span 10 !important;
   }
+  [class*='-small-8'] {
+    grid-column: auto/span 8;
+  }
   .small-hide {
     display: none;
   }

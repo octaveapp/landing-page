@@ -8,9 +8,7 @@ const Section = styled.section`
 `
 
 export default ({ children }) => (
-  <Section className="grid-12">
-    <div className="col-1" />
-    <div className="col-10">{children}</div>
-    <div className="col-1" />
+  <Section className="auto-grid container">
+    <div className="col-1 has-gutter">{children}</div>
   </Section>
 )

@@ -37,7 +37,9 @@ export default ({ siteTitle, hideCallToAction = false }) => (
           </a>
         </h1>
         <div className="subscribe-container">
-          {!hideCallToAction && <CallToAction green>Inscription</CallToAction>}
+          {!hideCallToAction && (
+            <CallToAction colorSheme="green">Inscription</CallToAction>
+          )}
         </div>
       </div>
     </div>

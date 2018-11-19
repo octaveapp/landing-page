@@ -3,13 +3,12 @@ import styled from 'styled-components'
 
 const ListItem = styled.div`
   margin-bottom: 5rem;
+  cursor: pointer;
   h4 {
     color: #6cc566;
   }
-  cursor: pointer;
   .wrapper {
     margin-top: -0.8rem;
-    margin-left: 1rem;
     height: 100%;
     position: relative;
     .icon-container {
@@ -50,11 +49,23 @@ const ListItem = styled.div`
       height: 100%;
     }
   }
+  @media screen and (max-width: 768px) {
+    h4 {
+      margin: 0 0 1rem 0;
+    }
+    .wrapper {
+      margin-top: 0;
+      .icon-container {
+        padding: 0;
+        width: auto;
+      }
+    }
+  }
 `
 
 export default ({ iconName, title, children, selected }) => (
   <ListItem selected={selected}>
-    <div className="grid-6 has-gutter">
+    <div className="grid-8 has-gutter">
       <div className="col-1">
         <div className="wrapper">
           <div className="icon-container">
@@ -63,7 +74,7 @@ export default ({ iconName, title, children, selected }) => (
           <div className="border">&nbsp;</div>
         </div>
       </div>
-      <div className="col-5">
+      <div className="col-7">
         <h4>{title}</h4>
         <p>{children}</p>
       </div>

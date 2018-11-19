@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import IphoneX from '../images/iphonex-mockup.png'
-import Pattern from '../images/bg-pattern-2.png'
-import CallToAction from './call-to-action'
+import IphoneX from '../../images/iphonex-mockup.png'
+import Pattern from '../../images/bg-pattern-2.png'
+import CallToAction from '../call-to-action'
 
 const Root = styled.div`
   margin-bottom: 20rem;
@@ -58,7 +58,7 @@ export default () => (
           L'application mobile qui vous fait gagner un temps précieux dans votre
           cuisine et pour vos courses
         </p>
-        <CallToAction green>Je m'inscris</CallToAction>
+        <CallToAction colorSheme="green">Je m'inscris</CallToAction>
       </div>
       <div className="iphonex-container col-4">
         <img

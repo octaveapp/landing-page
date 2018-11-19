@@ -49,7 +49,7 @@ const Layout = ({ children }) => (
           </Helmet>
           <Header siteTitle={title} />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </>
       )
     }}

@@ -3,6 +3,7 @@ import Section from '../section'
 
 import ImageList from './image-list'
 import { Oli, RedDot, BlueDot } from '../commons/octave-item-list'
+import Paragraph from '../commons/paragraph'
 import Feature1 from '../../images/feature-usage-1.jpg'
 import Feature2 from '../../images/feature-usage-2.jpg'
 import Feature3 from '../../images/feature-usage-3.jpg'
@@ -10,18 +11,11 @@ import Feature3 from '../../images/feature-usage-3.jpg'
 export default () => (
   <Section>
     <h3>Les fonctionnalités d’Octave</h3>
-    <div className="grid-10">
-      <div className="col-1" />
-      <div className="col-8">
-        <p>
-          Avec Octave, nous voulons proposer le meilleur de la technologie pour
-          vous aider à relever les défis du quotidien. Notre application vous
-          propose des fonctionnalités innovantes pour une alimentation plus
-          heureuse.
-        </p>
-      </div>
-      <div className="col-1" />
-    </div>
+    <Paragraph>
+      Avec Octave, nous voulons proposer le meilleur de la technologie pour vous
+      aider à relever les défis du quotidien. Notre application vous propose des
+      fonctionnalités innovantes pour une alimentation plus heureuse.
+    </Paragraph>
     <ImageList img={Feature1} alt="Pâte tomate">
       <Oli>
         Organisation souple des repas avec soit un planning hebdomadaire, soit

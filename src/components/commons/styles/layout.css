@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h2,
@@ -37,12 +37,28 @@ footer {
   .container {
     margin: 0 1rem;
   }
+  body {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
   [class*='-small-10'] {
     grid-column: auto/span 10 !important;
   }
+  .small-hide {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
+  .hide-large,
+  .mobile-seperator {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
   .container {
     margin: 0 auto;
   }

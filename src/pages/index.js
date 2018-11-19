@@ -10,8 +10,8 @@ const IndexPage = () => (
   <Layout>
     <HeaderSuffix />
     <FirstPart />
-    <SecondPart />
-    <ThirdPart />
+    {/*<SecondPart />
+    <ThirdPart /> */}
   </Layout>
 )
 

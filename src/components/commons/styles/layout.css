@@ -22,3 +22,28 @@ section,
 footer {
   margin-top: 5rem;
 }
+
+.container-fluid,
+.container {
+  margin: 0 5rem;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 768px) {
+  .container-fluid,
+  .container {
+    margin: 0 1rem;
+  }
+  [class*='-small-10'] {
+    grid-column: auto/span 10 !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    margin: 0 auto;
+  }
+}

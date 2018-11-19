@@ -7,20 +7,22 @@ const Section = styled.section`
   .content {
     text-align: center;
     color: white;
-    margin-bottom: 4rem;
+    padding: 0.2rem 0 2rem 0;
   }
 `
 
 export default () => (
-  <Section className="grid-12 mobile-seperator">
-    <div className="col-1" />
-    <div className="col-10 content">
-      <h3>
-        Organiser ses repas et ses courses n’aura jamais été aussi simple.
-        Manger sainement non plus.
-      </h3>
-      <CallToActionButton colorSheme="white">Je m'inscris</CallToActionButton>
+  <Section className="mobile-seperator">
+    <div className="grid-12 container">
+      <div className="col-1" />
+      <div className="col-10 content">
+        <h3>
+          Organiser ses repas et ses courses n’aura jamais été aussi simple.
+          Manger sainement non plus.
+        </h3>
+        <CallToActionButton colorSheme="white">Je m'inscris</CallToActionButton>
+      </div>
+      <div className="col-1" />
     </div>
-    <div className="col-1" />
   </Section>
 )

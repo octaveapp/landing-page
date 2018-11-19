@@ -35,7 +35,7 @@ footer {
 @media screen and (max-width: 768px) {
   .container-fluid,
   .container {
-    margin: 0 1rem;
+    margin: 0 2rem !important;
   }
   body {
     font-size: 2rem;
@@ -65,4 +65,8 @@ footer {
   .container {
     margin: 0 auto;
   }
+}
+
+.octave-logo {
+  width: 20rem;
 }

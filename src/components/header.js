@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import OctaveLogo from '../images/octave-logo.png'
+import BurgerMenu from '../images/burger-menu.png'
 import CallToAction from './call-to-action'
+import Menu from './menu'
 
 const Header = styled.header`
   background-color: #6cc566;
@@ -10,38 +12,65 @@ const Header = styled.header`
   .row {
     display: flex;
     justify-content: space-between;
-    h1 {
-      margin: 0;
-      text-align: left;
+    align-items: center;
       .octave-logo-link {
         text-decoration: none;
-        .octave-logo {
-          width: 20rem;
-        }
       }
+  
+    .burger-menu {
+      display: none;
+      background-image: url('${BurgerMenu}');
+      background-size: cover;
+      width: 3.1rem;
+      height: 2.6rem;
+      content: ' ';
     }
-    .subscribe-container {
-      @media (max-width: 768px) {
+
+    @media (max-width: 768px) {
+      .subscribe-container {
         display: none;
+      }
+      .burger-menu {
+        display: block;
       }
     }
   }
 `
-export default ({ siteTitle, hideCallToAction = false }) => (
-  <Header>
-    <div className="container-fluid auto-grid">
-      <div className="row col-12">
-        <h1>
-          <a href="/" className="octave-logo-link">
-            <img className="octave-logo" src={OctaveLogo} alt={siteTitle} />
-          </a>
-        </h1>
-        <div className="subscribe-container">
-          {!hideCallToAction && (
-            <CallToAction colorSheme="green">Inscription</CallToAction>
-          )}
+export default class Root extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isMenuShown: false,
+    }
+    this.toggleMenu = this.toggleMenu.bind(this)
+  }
+
+  toggleMenu() {
+    this.setState({ isMenuShown: !this.state.isMenuShown })
+  }
+
+  render() {
+    return (
+      <Header>
+        <Menu shown={this.state.isMenuShown} onClose={this.toggleMenu} />
+        <div className="container-fluid auto-grid">
+          <div className="row col-12">
+            <a href="/" className="octave-logo-link">
+              <img
+                className="octave-logo"
+                src={OctaveLogo}
+                alt={this.props.siteTitle}
+              />
+            </a>
+            <div className="subscribe-container">
+              {!this.props.hideCallToAction && (
+                <CallToAction colorSheme="green">Inscription</CallToAction>
+              )}
+            </div>
+            <div className="burger-menu" onClick={this.toggleMenu} />
+          </div>
         </div>
-      </div>
-    </div>
-  </Header>
-)
+      </Header>
+    )
+  }
+}

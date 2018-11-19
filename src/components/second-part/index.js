@@ -10,7 +10,7 @@ const Section = styled.section`
   .content {
     text-align: center;
     color: white;
-    margin-bottom: 4rem;
+    padding: 0.2rem 0 2rem 0;
   }
 `
 

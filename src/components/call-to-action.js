@@ -42,6 +42,7 @@ const Button = styled.a`
   border-radius: 2rem;
   padding: 1.2rem 4rem;
   font-size: 2rem;
+  font-family: 'Work Sans', sans-serif !important;
   cursor: pointer;
   text-decoration: none;
   background-color: ${props => colorShemes[props.colorSheme].bg};

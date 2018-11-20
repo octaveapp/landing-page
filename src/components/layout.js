@@ -46,6 +46,7 @@ const Layout = ({ children }) => (
 
   gtag('config', 'UA-126067793');`}
             </script>
+            <base href={process.env.BASE_URL} />
           </Helmet>
           <Header siteTitle={title} />
           {children}

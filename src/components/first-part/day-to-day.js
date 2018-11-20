@@ -28,6 +28,9 @@ export default class DayToDay extends Component {
     this.state = {
       currentScreen: OnePlusPlanning,
     }
+  }
+
+  componentDidMount() {
     if (window.outerWidth >= MOBILE_BREAK_POINT) {
       this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this)
       this.intervalId = setInterval(

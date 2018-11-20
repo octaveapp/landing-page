@@ -61,9 +61,9 @@ export default () => (
         </p>
       </div>
       <div className="col-6-small-all links">
-        <a href="/">Accueil</a>
+        <a href="">Accueil</a>
         <br />
-        <a href="/team">L’équipe</a>
+        <a href="team">L’équipe</a>
         <br />
         <a href="signup">Inscription</a>
         <br />

@@ -4,20 +4,10 @@ import Section from '../section'
 import ImageTitleItem from './image-title-item'
 import Paragraph from '../commons/paragraph'
 import Ul from '../commons/ul'
+import PhoneContainer from './phone-container'
 import OnePlusShopping from '../../images/oneplus-shopping.jpg'
 import OnePlusCooking from '../../images/oneplus-cooking.jpg'
 import OnePlusPlanning from '../../images/oneplus-planning.jpg'
-import styled from 'styled-components'
-
-const PhoneContainer = styled.div`
-  @media screen and (max-width: 768px) {
-    text-align: center;
-    margin-bottom: 4rem;
-    img {
-      width: 33%;
-    }
-  }
-`
 
 const TIME_TO_READ = 3000
 const MOBILE_BREAK_POINT = 769
@@ -26,8 +16,11 @@ export default class DayToDay extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentScreen: OnePlusPlanning,
+      currentScreenIdx: 0,
     }
+    this.screens = [OnePlusPlanning, OnePlusShopping, OnePlusCooking]
+    this.handleNextScreen = this.handleNextScreen.bind(this)
+    this.handlePrevousScreen = this.handlePrevousScreen.bind(this)
   }
 
   componentDidMount() {
@@ -40,29 +33,31 @@ export default class DayToDay extends Component {
     }
   }
 
-  handleOnMouseEnter(newSelectedScreen) {
+  handleOnMouseEnter(val) {
     return () => {
       clearInterval(this.intervalId)
-      this.setState({ currentScreen: newSelectedScreen })
+      this.setState({ currentScreenIdx: val })
     }
   }
 
   handleInterval() {
-    let newScreen
-    if (this.state.currentScreen === OnePlusPlanning) {
-      newScreen = OnePlusShopping
-    }
-    if (this.state.currentScreen === OnePlusShopping) {
-      newScreen = OnePlusCooking
-    }
-    if (this.state.currentScreen === OnePlusCooking) {
-      newScreen = OnePlusPlanning
-    }
-    this.setState({ currentScreen: newScreen })
+    this.handleNextScreen()
+  }
+
+  handleNextScreen() {
+    const nextIdx =
+      this.state.currentScreenIdx == 2 ? 0 : this.state.currentScreenIdx + 1
+    this.setState({ currentScreenIdx: nextIdx })
+  }
+
+  handlePrevousScreen() {
+    const nextIdx =
+      this.state.currentScreenIdx == 0 ? 2 : this.state.currentScreenIdx - 1
+    this.setState({ currentScreenIdx: nextIdx })
   }
 
   render() {
-    const { currentScreen } = this.state
+    const { currentScreenIdx } = this.state
     return (
       <Section>
         <h3>Un quotidien plus simple avec Octave</h3>
@@ -73,20 +68,19 @@ export default class DayToDay extends Component {
           étapes.
         </Paragraph>
         <div className="grid-12 has-gutter">
-          <PhoneContainer className="col-4-small-all">
-            <img
-              src={currentScreen}
-              alt="Application Octave dans le One Plus 6T"
-            />
-          </PhoneContainer>
+          <PhoneContainer
+            currentScreen={this.screens[currentScreenIdx]}
+            onNext={this.handleNextScreen}
+            onPrevious={this.handlePreviousScreen}
+          />
           <div className="col-1" />
           <div className="col-7-small-10">
             <Ul>
               <ImageTitleItem
                 iconName="calendar"
                 title="Planifier vos repas en un clin d’oeil"
-                selected={currentScreen === OnePlusPlanning}
-                onMouseEnter={this.handleOnMouseEnter(OnePlusPlanning)}
+                selected={currentScreenIdx === 0}
+                onMouseEnter={this.handleOnMouseEnter(0)}
               >
                 Avant de faire vos courses, vous choisissez vos repas en
                 quelques minutes. Octave vous fait des propositions de recettes
@@ -97,8 +91,8 @@ export default class DayToDay extends Component {
               <ImageTitleItem
                 iconName="cart"
                 title="Acheter les bons produits"
-                selected={currentScreen === OnePlusShopping}
-                onMouseEnter={this.handleOnMouseEnter(OnePlusShopping)}
+                selected={currentScreenIdx === 1}
+                onMouseEnter={this.handleOnMouseEnter(1)}
               >
                 Octave génère votre liste de courses en fonction des recettes et
                 quantités nécessaires. Vous finalisez cette liste en
@@ -109,8 +103,8 @@ export default class DayToDay extends Component {
               <ImageTitleItem
                 iconName="cooking"
                 title="Cuisiner en toute sérénité"
-                selected={currentScreen === OnePlusCooking}
-                onMouseEnter={this.handleOnMouseEnter(OnePlusCooking)}
+                selected={currentScreenIdx === 2}
+                onMouseEnter={this.handleOnMouseEnter(2)}
               >
                 Avec vos recettes et tous les ingrédients, vous abordez la
                 semaine en toute sérénité. Au moment de préparer vos repas,

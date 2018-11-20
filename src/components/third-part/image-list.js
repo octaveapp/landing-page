@@ -11,9 +11,12 @@ const ImgContainer = styled.div`
   img {
     border-radius: 2rem;
   }
-  @media screen and (max-width: 768px) {
-    order: -1;
-  }
+  ${props =>
+    props.reverse &&
+    `
+  @media screen and (min-width: 768px) {
+    order: 1;
+  }`};
 `
 
 const Ul = styled.ul`
@@ -24,20 +27,21 @@ const Ul = styled.ul`
   }
 `
 
-export default ({ img, alt, children, alignRight }) => {
-  const elALignedToLeft = [Image(img, alt), UnorderedList(children)]
-  const els = alignRight ? elALignedToLeft.reverse() : elALignedToLeft
-  return <Root className="grid-12 has-gutter">{els}</Root>
-}
-
-const Image = (img, alt) => (
-  <ImgContainer className="col-5-small-all">
+const Image = ({ img, alt, reverse }) => (
+  <ImgContainer className="col-5-small-all" reverse={reverse}>
     <img src={img} alt={alt} />
   </ImgContainer>
 )
 
-const UnorderedList = children => (
+const UnorderedList = ({ children }) => (
   <div className="col-7-small-all">
     <Ul>{children}</Ul>
   </div>
+)
+
+export default ({ img, alt, children, reverse }) => (
+  <Root className="grid-12 has-gutter">
+    <Image img={img} alt={alt} reverse={reverse} />
+    <UnorderedList>{children}</UnorderedList>
+  </Root>
 )

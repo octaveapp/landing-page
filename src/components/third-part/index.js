@@ -16,7 +16,7 @@ export default () => (
       aider à relever les défis du quotidien. Notre application vous propose des
       fonctionnalités innovantes pour une alimentation plus heureuse.
     </Paragraph>
-    <ImageList img={Feature1} alt="Pâte tomate">
+    <ImageList img={Feature1} alt="Personne utilsant sont téléphone">
       <Oli>
         Organisation souple des repas avec soit un planning hebdomadaire, soit
         une simple liste de repas
@@ -34,7 +34,7 @@ export default () => (
         la validation ou d’autres propositions de recettes
       </Oli>
     </ImageList>
-    <ImageList img={Feature2} alt="Pâte tomate" alignRight>
+    <ImageList img={Feature2} alt="Panier de course" reverse>
       <Oli Icon={RedDot}>
         Connexion aux principales plateformes de courses en ligne afin de
         commander plus rapidement et simplement
@@ -52,7 +52,7 @@ export default () => (
         pour gérer la totalité de vos courses via Octave
       </Oli>
     </ImageList>
-    <ImageList img={Feature3} alt="Pâte tomate">
+    <ImageList img={Feature3} alt="Cuisine avec tablette">
       <Oli Icon={BlueDot}>
         Recettes disponibles dans l'application avec les étapes pas à pas
         expliquées simplement et clairement

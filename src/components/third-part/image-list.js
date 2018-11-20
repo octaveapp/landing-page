@@ -57,7 +57,7 @@ const UnorderedList = ({ children }) => (
 export default ({ img, alt, children, reverse }) => (
   <Root className="grid-12 has-gutter" reverse={reverse}>
     <Image img={img} alt={alt} />
-    <div class="col-1 small-hide between" />
+    <div className="col-1 small-hide between" />
     <UnorderedList>{children}</UnorderedList>
   </Root>
 )

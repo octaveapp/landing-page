@@ -36,7 +36,9 @@ const ListItem = styled.div`
       height: 0;
     }
   }
-  :hover {
+  ${props =>
+    props.selected &&
+    `
     .wrapper {
       .icon-container {
         background-color: #6cc566;
@@ -44,12 +46,12 @@ const ListItem = styled.div`
           color: #fff;
         }
       }
+      .border {
+        height: 100%;
+      }
     }
-    .border {
-      height: 100%;
-    }
-  }
-  @media screen and (max-width: 768px) {
+    
+  }`} @media screen and (max-width: 768px) {
     h4 {
       margin: 0 0 1rem 0;
     }
@@ -63,8 +65,8 @@ const ListItem = styled.div`
   }
 `
 
-export default ({ iconName, title, children, selected }) => (
-  <ListItem selected={selected}>
+export default ({ iconName, title, children, selected, onMouseEnter }) => (
+  <ListItem selected={selected} onMouseEnter={onMouseEnter}>
     <div className="grid-8 has-gutter">
       <div className="col-1">
         <div className="wrapper">

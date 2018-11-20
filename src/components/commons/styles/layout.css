@@ -14,6 +14,7 @@ h5 {
 }
 
 h3 {
+  font-size: 2rem;
   margin: 3rem 0;
   text-align: center;
 }
@@ -38,10 +39,10 @@ footer {
     margin: 0 2rem !important;
   }
   body {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   h3 {
-    font-size: 2.8rem;
+    font-weight: bold;
   }
   [class*='-small-10'] {
     grid-column: auto/span 10 !important;

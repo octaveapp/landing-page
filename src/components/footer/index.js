@@ -13,6 +13,9 @@ const Footer = styled.footer`
       text-decoration: none;
       color: #fff;
     }
+    a:hover {
+      text-decoration: underline;
+    }
   }
   .logo-container {
     img {
@@ -60,7 +63,7 @@ export default () => (
       <div className="col-6-small-all links">
         <a href="/">Accueil</a>
         <br />
-        <a href="/team">L’équipe Octave</a>
+        <a href="/team">L’équipe</a>
         <br />
         <a href="signup">Inscription</a>
         <br />

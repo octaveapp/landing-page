@@ -8,7 +8,7 @@ import CloseIcon from '../images/close-icon.png'
 const Popover = styled.div`
   display: ${props => (props.shown ? 'block' : 'none')};
   background-color: #008dd5;
-  padding: 7rem;
+  padding: 7rem 1rem;
   z-index: 10;
   position: fixed;
   overflow: hidden;

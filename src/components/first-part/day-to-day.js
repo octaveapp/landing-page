@@ -19,19 +19,43 @@ const PhoneContainer = styled.div`
   }
 `
 
+const TIME_TO_READ = 3000
+const MOBILE_BREAK_POINT = 769
+
 export default class DayToDay extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentScreen: OnePlusShopping,
+      currentScreen: OnePlusPlanning,
     }
-    this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this)
+    if (window.outerWidth >= MOBILE_BREAK_POINT) {
+      this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this)
+      this.intervalId = setInterval(
+        this.handleInterval.bind(this),
+        TIME_TO_READ
+      )
+    }
   }
 
   handleOnMouseEnter(newSelectedScreen) {
     return () => {
+      clearInterval(this.intervalId)
       this.setState({ currentScreen: newSelectedScreen })
     }
+  }
+
+  handleInterval() {
+    let newScreen
+    if (this.state.currentScreen === OnePlusPlanning) {
+      newScreen = OnePlusShopping
+    }
+    if (this.state.currentScreen === OnePlusShopping) {
+      newScreen = OnePlusCooking
+    }
+    if (this.state.currentScreen === OnePlusCooking) {
+      newScreen = OnePlusPlanning
+    }
+    this.setState({ currentScreen: newScreen })
   }
 
   render() {

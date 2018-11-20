@@ -36,9 +36,10 @@ const ListItem = styled.div`
       height: 0;
     }
   }
-  ${props =>
-    props.selected &&
-    `
+  @media screen and (min-width: 768px) {
+    ${props =>
+      props.selected &&
+      `
     .wrapper {
       .icon-container {
         background-color: #6cc566;
@@ -51,7 +52,9 @@ const ListItem = styled.div`
       }
     }
     
-  }`} @media screen and (max-width: 768px) {
+  }`};
+  }
+  @media screen and (max-width: 768px) {
     h4 {
       margin: 0 0 1rem 0;
     }

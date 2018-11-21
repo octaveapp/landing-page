@@ -37,6 +37,20 @@ const colorShemes = {
     },
   },
 }
+
+const colorMixin = sheme => {
+  const c = colorShemes[sheme]
+  return `
+  background-color: ${c.bg};
+    border: 3px solid ${c.border};
+    color: ${c.color};
+    &:hover {
+      background-color: ${c.hover.bg};
+      border: 3px solid ${c.hover.border};
+      color: ${c.hover.color};
+    }`
+}
+
 const Button = styled.a`
   display: inline-block;
   border-radius: 2rem;
@@ -45,19 +59,33 @@ const Button = styled.a`
   font-family: 'Work Sans', sans-serif !important;
   cursor: pointer;
   text-decoration: none;
-  background-color: ${props => colorShemes[props.colorSheme].bg};
-  border: 3px solid ${props => colorShemes[props.colorSheme].border};
-  color: ${props => colorShemes[props.colorSheme].color + '!important'};
   font-weight: 600;
   &:hover {
-    background-color: ${props => colorShemes[props.colorSheme].hover.bg};
-    border: 3px solid ${props => colorShemes[props.colorSheme].hover.border};
-    color: ${props => colorShemes[props.colorSheme].hover.color + '!important'};
     text-decoration: none;
   }
+  &.green {
+    ${colorMixin('green')};
+  }
+  &.blue {
+    ${colorMixin('blue')};
+  }
+  &.white {
+    ${colorMixin('white')};
+  }
+  @media screen and (max-width: 768px) {
+    &.small-green {
+      ${colorMixin('green')};
+    }
+    &.small-blue {
+      ${colorMixin('blue')};
+    }
+    &.small-white {
+      ${colorMixin('white')};
+    }
+  }
 `
-export default ({ children, colorSheme }) => (
-  <Button colorSheme={colorSheme} href="signup">
+export default ({ children, className }) => (
+  <Button href="signup" className={className}>
     {children}
   </Button>
 )

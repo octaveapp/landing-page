@@ -20,7 +20,7 @@ export default () => (
           Organiser ses repas et ses courses n’aura jamais été aussi simple.
           Manger sainement non plus.
         </h3>
-        <CallToActionButton colorSheme="white">Je m'inscris</CallToActionButton>
+        <CallToActionButton className="white">Je m'inscris</CallToActionButton>
       </div>
       <div className="col-1" />
     </div>

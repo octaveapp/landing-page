@@ -43,7 +43,7 @@ export default ({ onClose, shown }) => (
       <a href="#">Accueil</a>
       <a href="team">L'équipe</a>
       <a href="confidentiality">Politique de confidentialité</a>
-      <CallToAction colorSheme="white">Inscription</CallToAction>
+      <CallToAction className="white">Inscription</CallToAction>
     </nav>
     <img className="close-btn" onClick={onClose} src={CloseIcon} alt="close" />
   </Popover>

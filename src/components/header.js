@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import OctaveLogo from '../images/octave-logo.png'
-import BurgerMenu from '../images/burger-menu.png'
+import BurgerMenu from '../images/burger-menu.svg'
 import CallToAction from './call-to-action'
 import Menu from './menu'
 
@@ -21,8 +21,8 @@ const Header = styled.header`
       display: none;
       background-image: url('${BurgerMenu}');
       background-size: cover;
-      width: 3.1rem;
-      height: 2.6rem;
+      width: 3.2rem;
+      height: 3.2rem;
       content: ' ';
     }
 
@@ -64,7 +64,7 @@ export default class Root extends Component {
             </a>
             <div className="subscribe-container">
               {!this.props.hideCallToAction && (
-                <CallToAction colorSheme="green">Inscription</CallToAction>
+                <CallToAction className="green">Inscription</CallToAction>
               )}
             </div>
             <div className="burger-menu" onClick={this.toggleMenu} />

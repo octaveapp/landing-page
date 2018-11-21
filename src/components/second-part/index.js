@@ -12,6 +12,9 @@ const Section = styled.section`
     color: white;
     padding: 0.2rem 0 2rem 0;
   }
+  @media screen and (max-width: 768px) {
+    background: #6cc566;
+  }
 `
 
 export default () => (
@@ -23,7 +26,9 @@ export default () => (
           Semaine après semaine, Octave apprend à vous connaître et adapte ses
           propositions. Vous apportez plus de variété et d'équilibre à vos repas
         </h3>
-        <CallToActionButton colorSheme="blue">Je m'inscris</CallToActionButton>
+        <CallToActionButton className="blue small-green">
+          Je m'inscris
+        </CallToActionButton>
       </div>
     </div>
   </Section>

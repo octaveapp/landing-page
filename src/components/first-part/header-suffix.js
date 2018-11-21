@@ -58,7 +58,7 @@ export default () => (
           L'application mobile qui vous fait gagner un temps précieux dans votre
           cuisine et pour vos courses
         </p>
-        <CallToAction colorSheme="green">Je m'inscris</CallToAction>
+        <CallToAction className="green">Je m'inscris</CallToAction>
       </div>
       <div className="iphonex-container col-4">
         <img

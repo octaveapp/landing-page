@@ -50,7 +50,7 @@ export default () => (
     </div>
     <SignUpRow className="auto-grid">
       <div className="col-1">
-        <CallToAction colorSheme="green">Contactez-nous</CallToAction>
+        <CallToAction className="green">Contactez-nous</CallToAction>
       </div>
     </SignUpRow>
   </Section>

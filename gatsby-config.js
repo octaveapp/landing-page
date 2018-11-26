@@ -4,10 +4,33 @@ module.exports = {
     description:
       "L'application mobile qui vous fait gagner un temps précieux dans votre cuisine et pour vos courses",
     keywords: 'Famille, Manger sain, Equilibre alimentaire, Application',
+    siteUrl: `https://www.octaveapp.fr`,
   },
   pathPrefix: '/',
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,9 +54,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
+      options: {},
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline

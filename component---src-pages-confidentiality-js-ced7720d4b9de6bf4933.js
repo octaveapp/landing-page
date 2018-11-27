@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{136:function(n,e,t){"use strict";t.r(e);var a=t(0),u=t.n(a),c=t(146);e.default=function(){return u.a.createElement(c.a,null,"WIP")}}}]);
-//# sourceMappingURL=component---src-pages-confidentiality-js-ced7720d4b9de6bf4933.js.map

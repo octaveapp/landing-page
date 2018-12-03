@@ -20,7 +20,7 @@ export default class DayToDay extends Component {
     }
     this.screens = [OnePlusPlanning, OnePlusShopping, OnePlusCooking]
     this.handleNextScreen = this.handleNextScreen.bind(this)
-    this.handlePrevousScreen = this.handlePrevousScreen.bind(this)
+    this.handlePreviousScreen = this.handlePreviousScreen.bind(this)
   }
 
   componentDidMount() {
@@ -50,7 +50,7 @@ export default class DayToDay extends Component {
     this.setState({ currentScreenIdx: nextIdx })
   }
 
-  handlePrevousScreen() {
+  handlePreviousScreen() {
     const nextIdx =
       this.state.currentScreenIdx === 0 ? 2 : this.state.currentScreenIdx - 1
     this.setState({ currentScreenIdx: nextIdx })

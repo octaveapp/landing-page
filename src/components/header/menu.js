@@ -43,7 +43,7 @@ export default ({ onClose, shown }) => (
   <Popover shown={shown}>
     <img className="octave-logo" src={OctaveLogo} alt="logo" />
     <nav className="container">
-      <a href="index">Accueil</a>
+      <a href="/">Accueil</a>
       <a href="team">L'équipe</a>
       <a href="confidentiality">Politique de confidentialité</a>
       <CallToAction className="white">Inscription</CallToAction>

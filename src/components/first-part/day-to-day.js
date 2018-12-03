@@ -46,13 +46,13 @@ export default class DayToDay extends Component {
 
   handleNextScreen() {
     const nextIdx =
-      this.state.currentScreenIdx == 2 ? 0 : this.state.currentScreenIdx + 1
+      this.state.currentScreenIdx === 2 ? 0 : this.state.currentScreenIdx + 1
     this.setState({ currentScreenIdx: nextIdx })
   }
 
   handlePrevousScreen() {
     const nextIdx =
-      this.state.currentScreenIdx == 0 ? 2 : this.state.currentScreenIdx - 1
+      this.state.currentScreenIdx === 0 ? 2 : this.state.currentScreenIdx - 1
     this.setState({ currentScreenIdx: nextIdx })
   }
 

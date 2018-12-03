@@ -57,7 +57,7 @@ export default class Root extends Component {
         <Menu shown={this.state.isMenuShown} onClose={this.toggleMenu} />
         <div className="container auto-grid">
           <div className="row col-12">
-            <a href="#" className="octave-logo-link">
+            <a href="/" className="octave-logo-link">
               <img
                 className="octave-logo"
                 src={OctaveLogo}

@@ -33,8 +33,8 @@ const Root = styled.div`
     position: relative;
     .iphonex {
       position: absolute;
-      right: -5.5rem;
-      max-width: 33rem;
+      right: -30rem;
+      max-width: 70rem;
     }
   }
   @media screen and (max-width: 768px) {

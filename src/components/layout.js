@@ -9,7 +9,7 @@ import './commons/styles/knacss.css'
 import './commons/styles/layout.css'
 import './commons/styles/octave-font.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, hideCallToAction }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -60,7 +60,7 @@ const Layout = ({ children }) => (
               `}
             </script>
           </Helmet>
-          <Header siteTitle={title} />
+          <Header siteTitle={title} hideCallToAction={hideCallToAction} />
           {children}
           <Footer />
         </>

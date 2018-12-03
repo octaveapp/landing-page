@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Main from '../components/signup'
 
 const SignUpPage = () => (
-  <Layout>
+  <Layout hideCallToAction={true}>
     <Main />
   </Layout>
 )

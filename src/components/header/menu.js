@@ -6,7 +6,10 @@ import OctaveLogo from '../../images/octave-logo.png'
 import CloseIcon from '../../images/close-icon.png'
 
 const Popover = styled.div`
-  display: ${props => (props.shown ? 'block' : 'none')};
+  display: ${props => (props.shown ? 'flex' : 'none')};
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background-color: #008dd5;
   padding: 7rem 1rem;
   z-index: 10;

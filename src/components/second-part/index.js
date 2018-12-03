@@ -10,7 +10,7 @@ const Section = styled.section`
   .content {
     text-align: center;
     color: white;
-    padding: 0.2rem 0 2rem 0;
+    padding: 0.2rem 0 6rem 0;
   }
   @media screen and (max-width: 768px) {
     background: #6cc566;

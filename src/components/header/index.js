@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import OctaveLogo from '../images/octave-logo.png'
-import BurgerMenu from '../images/burger-menu.svg'
-import CallToAction from './call-to-action'
+import OctaveLogo from '../../images/octave-logo.png'
+import BurgerMenu from '../../images/burger-menu.svg'
+import CallToAction from '../call-to-action'
 import Menu from './menu'
 
 const Header = styled.header`
@@ -46,7 +46,9 @@ export default class Root extends Component {
   }
 
   toggleMenu() {
-    this.setState({ isMenuShown: !this.state.isMenuShown })
+    this.setState({ isMenuShown: !this.state.isMenuShown }, () => {
+      document.body.style.overflow = this.state.isMenuShown ? 'hidden' : 'auto'
+    })
   }
 
   render() {

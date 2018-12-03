@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import CallToAction from './call-to-action'
-import OctaveLogo from '../images/octave-logo.png'
-import CloseIcon from '../images/close-icon.png'
+import CallToAction from '../call-to-action'
+import OctaveLogo from '../../images/octave-logo.png'
+import CloseIcon from '../../images/close-icon.png'
 
 const Popover = styled.div`
   display: ${props => (props.shown ? 'block' : 'none')};
@@ -40,7 +40,7 @@ export default ({ onClose, shown }) => (
   <Popover shown={shown}>
     <img className="octave-logo" src={OctaveLogo} alt="logo" />
     <nav className="container">
-      <a href="#">Accueil</a>
+      <a href="index">Accueil</a>
       <a href="team">L'équipe</a>
       <a href="confidentiality">Politique de confidentialité</a>
       <CallToAction className="white">Inscription</CallToAction>

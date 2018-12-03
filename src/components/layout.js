@@ -37,7 +37,7 @@ const Layout = ({ children }) => (
             <html lang="fr" />
             <script
               async
-              src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
+              src="https://www.googletagmanager.com/gtag/js?id=UA-126067793-2"
             />
             <script>
               {`
@@ -45,7 +45,7 @@ const Layout = ({ children }) => (
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', 'UA-126067793');`}
+                gtag('config', 'UA-126067793-2');`}
             </script>
             <script>
               {`

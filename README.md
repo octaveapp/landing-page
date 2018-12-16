@@ -1,97 +1,108 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Octave App - Landing page
 
-Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
+This landing page has been build with [Gatsby](gatsbyjs.org)
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+The default readme is available [here](./GATSBY_README.md)
 
-## 🚀 Quick start
+# Getting Started
 
-1.  **Create a Gatsby site.**
+To develop localy, please ensure you have the pre-requis :
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+- NodeJS v10 installed. You can use [nvm](https://github.com/creationix/nvm) to install it easily
+- A code editor, [Visual Studio Code](https://code.visualstudio.com/) works like a charm
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter
-    ```
+From the root dir of the project, tap in in a terminal :
 
-1.  **Start developing.**
+```
+npm install
+```
 
-    Navigate into your new site’s directory and start it up.
+It will install all project dependencies, then :
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+```
+npm run develop
+```
 
-1.  **Open the source code and start editing!**
+The local server will start, and the Octave landing page should be available on <http://localhost:8000>
+While this command runs, each file modification will be automaticaly take in count, and will appear in the browser without reload.
 
-    Your site is now running at `http://localhost:8000`!
-    
-    *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-    
-## 🧐 What's inside?
+## More commands
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+To deploy the app in production, just tap in a terminal :
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
+```
+npm run deploy
+```
 
-  1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.  
+To format files with Prettier :
+
+```
+npm run format
+```
+
+# What's inside?
+
+```
+./
+├── ...
+├── nodes_modules.js
+├── public
+├── gatsby-config.js                    
+├── package-lock.json
+├── package.json
+└── src
+    ├── components
+    │   ├── commons
+    │   │   ├── styles
+    │   ├── footer
+    │   ├── header
+    │   ├── index
+    │   │   ├── first-part
+    │   │   ├── second-part
+    │   │   └── third-part
+    │   ├── layout.js
+    │   ├── signup
+    │   └── team
+    ├── fonts
+    ├── images
+    ├── pages
+    └── statics
+```
+
+1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+
+2.  **`/public`**: This directory where your project is built
+
+5.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail). 
+
+6.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
   
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
+7.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-## 🎓 Learning Gatsby
+8.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+9.  **`/src/components`**: This directory will React component used in the pages
 
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+10.  **`/src/components/commons`**: All components used into many pages
 
--   **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+11.  **`/src/components/commons/styles`**: General stylesheet
 
-## 💫 Deploy
+12.  **`/src/components/footer`**: Contains footer components
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+13.  **`/src/components/header`**: Contains header components
+
+14.  **`/src/components/index`**: Contains all components used in the home page
+
+15.  **`/src/components/layout.js`**: Is the layout component used in each page
+
+16.  **`/src/components/signup`**: Contains all components used in the signup page
+
+17.  **`/src/components/team`**: Contains all components used in the team page
+
+17.  **`/src/fonts`**: Contains web font. In our case, it's a generated from svg font. A font it's a more convient way to handle svg a manipulate them. For exemle, it's more easy to change the font's color than a svg image's color.
+
+18.  **`/src/images`**: Contains all images used in the site
+
+19.  **`/src/pages`**: Each file in the directory represents a real page in the site. Gatsby will take the file name as path for the site. For instance, `signup.js` in the folder will produre a page `http://octaveapp.fr/signup`. Each file contains the root React component of the page.
+
+20.  **`/src/statics`**: Static files copied in the root of the site each time we deploy.

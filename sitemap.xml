@@ -4,4 +4,5 @@
 <url> <loc>https://www.octaveapp.fr/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.octaveapp.fr/signup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.octaveapp.fr/team/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.octaveapp.fr/thank-you/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

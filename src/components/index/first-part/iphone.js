@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Iphone from '../../images/iphonex-mockup.png'
+import Iphone from '../../../images/iphonex-mockup.png'
 
 const Root = styled.div`
   position: relative;

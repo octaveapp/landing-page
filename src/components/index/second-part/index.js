@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import CallToActionButton from '../../components/call-to-action'
-import SecondSectionBg from '../../images/second-section-bg.jpg'
+import CallToActionButton from '../../commons/call-to-action'
+import SecondSectionBg from '../../../images/second-section-bg.jpg'
 
 const Section = styled.section`
   background: url(${SecondSectionBg});

@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from '../section'
+import Section from '../commons/section'
 import styled from 'styled-components'
 import Paragraph from '../commons/paragraph'
 import Tarif from './tarif'

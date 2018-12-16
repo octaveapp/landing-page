@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import Section from '../section'
+import Section from '../../commons/section'
 
 import ImageTitleItem from './image-title-item'
-import Paragraph from '../commons/paragraph'
-import Ul from '../commons/ul'
+import Paragraph from '../../commons/paragraph'
+import Ul from '../../commons/ul'
 import PhoneContainer from './phone-container'
-import OnePlusShopping from '../../images/oneplus-shopping.jpg'
-import OnePlusCooking from '../../images/oneplus-cooking.jpg'
-import OnePlusPlanning from '../../images/oneplus-planning.jpg'
+import OnePlusShopping from '../../../images/oneplus-shopping.jpg'
+import OnePlusCooking from '../../../images/oneplus-cooking.jpg'
+import OnePlusPlanning from '../../../images/oneplus-planning.jpg'
 
 const TIME_TO_READ = 3000
 const MOBILE_BREAK_POINT = 769

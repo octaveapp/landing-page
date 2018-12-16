@@ -1,9 +1,9 @@
 import React from 'react'
-import Section from '../section'
+import Section from '../../commons/section'
 
-import { Oli } from '../commons/octave-item-list'
-import Paragraph from '../commons/paragraph'
-import Ul from '../commons/ul'
+import { Oli } from '../../commons/octave-item-list'
+import Paragraph from '../../commons/paragraph'
+import Ul from '../../commons/ul'
 
 export default () => (
   <Section>

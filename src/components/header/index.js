@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import OctaveLogo from '../../images/octave-logo.png'
 import BurgerMenu from '../../images/burger-menu.svg'
-import CallToAction from '../call-to-action'
+import CallToAction from '../commons/call-to-action'
 import Menu from './menu'
 
 const Header = styled.header`

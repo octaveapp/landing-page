@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import CallToActionButton from '../call-to-action'
+import CallToActionButton from '../../commons/call-to-action'
 
 const Section = styled.section`
   background: #008dd5;

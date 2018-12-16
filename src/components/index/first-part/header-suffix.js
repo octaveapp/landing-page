@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import IphoneX from '../../images/iphonex-mockup.png'
-import Pattern from '../../images/bg-pattern-2.png'
-import CallToAction from '../call-to-action'
+import IphoneX from '../../../images/iphonex-mockup.png'
+import Pattern from '../../../images/bg-pattern-2.png'
+import CallToAction from '../../commons/call-to-action'
 
 const Root = styled.div`
   margin-bottom: 20rem;

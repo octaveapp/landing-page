@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import CallToAction from '../call-to-action'
+import CallToAction from '../commons/call-to-action'
 import OctaveLogo from '../../images/octave-logo.png'
 import CloseIcon from '../../images/close-icon.png'
 

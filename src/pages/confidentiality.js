@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import Section from '../components/section'
+import Section from '../components/commons/section'
 
 export default () => (
   <Layout>

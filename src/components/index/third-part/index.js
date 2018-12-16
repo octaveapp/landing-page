@@ -1,12 +1,12 @@
 import React from 'react'
-import Section from '../section'
+import Section from '../../commons/section'
 
 import ImageList from './image-list'
-import { Oli, RedDot, BlueDot } from '../commons/octave-item-list'
-import Paragraph from '../commons/paragraph'
-import Feature1 from '../../images/feature-usage-1.jpg'
-import Feature2 from '../../images/feature-usage-2.jpg'
-import Feature3 from '../../images/feature-usage-3.jpg'
+import { Oli, RedDot, BlueDot } from '../../commons/octave-item-list'
+import Paragraph from '../../commons/paragraph'
+import Feature1 from '../../../images/feature-usage-1.jpg'
+import Feature2 from '../../../images/feature-usage-2.jpg'
+import Feature3 from '../../../images/feature-usage-3.jpg'
 
 export default () => (
   <Section>

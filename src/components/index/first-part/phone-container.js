@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import ArrowLeft from '../../images/arrow-left.png'
-import ArrowRight from '../../images/arrow-right.png'
+import ArrowLeft from '../../../images/arrow-left.png'
+import ArrowRight from '../../../images/arrow-right.png'
 
 const PhoneContainer = styled.div`
   display: flex;

@@ -1,11 +1,11 @@
 import React from 'react'
-import Section from '../section'
+import Section from '../commons/section'
 import styled from 'styled-components'
 
 import Gerald from '../../images/gerald.jpg'
 import Ag from '../../images/ag.jpg'
 import Mathieu from '../../images/mathieu.jpg'
-import CallToAction from '../call-to-action'
+import CallToAction from '../commons/call-to-action'
 import Paragraph from '../commons/paragraph'
 
 const Col = styled.div`

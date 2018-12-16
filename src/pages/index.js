@@ -1,9 +1,9 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import FirstPart from '../components/first-part'
-import SecondPart from '../components/second-part'
-import ThirdPart from '../components/third-part'
+import FirstPart from '../components/index/first-part'
+import SecondPart from '../components/index/second-part'
+import ThirdPart from '../components/index/third-part'
 
 const IndexPage = () => (
   <Layout

@@ -7,6 +7,7 @@ import Footer from './footer'
 import './commons/styles/knacss.css'
 import './commons/styles/layout.css'
 import './commons/styles/octave-font.css'
+
 const Layout = ({
   children,
   title,
@@ -34,9 +35,6 @@ const Layout = ({
 
 function hotJarAndGoogleAnalyticsTags() {
   let i = 0
-  console.log(
-    `\n===============> Adding Google Analytics & HotJar tags ! <===============`
-  )
   return [
     <script
       key={i++}
@@ -68,6 +66,10 @@ function hotJarAndGoogleAnalyticsTags() {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  keywords: PropTypes.string.isRequired,
+  hideCallToAction: PropTypes.boolean.isRequired,
 }
 
 export default Layout

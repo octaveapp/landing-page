@@ -36,14 +36,10 @@ const PhoneContainer = styled.div`
   }
 `
 
-export default ({ currentScreen, onNext, onPrevious }) => (
+export default ({ src, alt, onNext, onPrevious }) => (
   <PhoneContainer className="col-4-small-all">
     <button className="arrow-left" onClick={onPrevious} />
-    <img
-      className="phone"
-      src={currentScreen}
-      alt="Application Octave dans le One Plus 6T"
-    />
+    <img className="phone" src={src} alt={alt} />
     <button className="arrow-right" onClick={onNext} />
   </PhoneContainer>
 )

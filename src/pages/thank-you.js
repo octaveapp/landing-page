@@ -12,7 +12,12 @@ const SignUpPage = () => (
     hideCallToAction={true}
   >
     <Section>
-      <h3>Votre inscription est confirmée ! Merci 🙏</h3>
+      <h3>
+        Votre inscription est confirmée ! Merci{' '}
+        <span role="img" aria-label="thank-you">
+          🙏
+        </span>
+      </h3>
       <Paragraph>
         Votre inscription à nos listes de diffusion et à la bêta d'Octave est
         confirmée. Nous vous avons envoyé quelques informations complémentaires

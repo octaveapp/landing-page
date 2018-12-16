@@ -18,7 +18,20 @@ export default class DayToDay extends Component {
     this.state = {
       currentScreenIdx: 0,
     }
-    this.screens = [OnePlusPlanning, OnePlusShopping, OnePlusCooking]
+    this.screens = [
+      {
+        src: OnePlusPlanning,
+        alt: `La recette de courge butternut - lentilles - quinoa sélectionnée par un utilisateur dans l'application Octave avec ses différentes caractéristiques`,
+      },
+      {
+        src: OnePlusShopping,
+        alt: `La liste de courses intelligente dans Octave avec la possibilité de faire ses courses en drive chez Carrefour`,
+      },
+      {
+        src: OnePlusCooking,
+        alt: `Le détail de la recette de courge butternut aux lentilles-quinoa sélectionnée par un utilisateur dans Octave avec toutes les étapes de la réalisation`,
+      },
+    ]
     this.handleNextScreen = this.handleNextScreen.bind(this)
     this.handlePreviousScreen = this.handlePreviousScreen.bind(this)
   }
@@ -69,7 +82,8 @@ export default class DayToDay extends Component {
         </Paragraph>
         <div className="grid-12 has-gutter">
           <PhoneContainer
-            currentScreen={this.screens[currentScreenIdx]}
+            alt={this.screens[currentScreenIdx].alt}
+            src={this.screens[currentScreenIdx].src}
             onNext={this.handleNextScreen}
             onPrevious={this.handlePreviousScreen}
           />

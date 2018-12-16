@@ -64,7 +64,7 @@ export default () => (
         <img
           className="iphonex"
           src={IphoneX}
-          alt="Application Octave dans l'Iphone"
+          alt="L'application Octave ouverte dans un iPhone avec les trois menus principaux visibles : planifier ses repas, faire ses courses, cuisiner les recettes"
         />
       </div>
       <div className="col-1" />

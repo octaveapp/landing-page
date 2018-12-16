@@ -69,7 +69,7 @@ Layout.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   keywords: PropTypes.string.isRequired,
-  hideCallToAction: PropTypes.bool.isRequired,
+  hideCallToAction: PropTypes.bool,
 }
 
 export default Layout

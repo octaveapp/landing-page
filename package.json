@@ -26,8 +26,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "deploy": "npm run build  && gh-pages -d public ",
+    "deploy": "npm run clean && npm run build  && gh-pages -d public ",
     "build": "NODE_ENV='production' && gatsby build && cp ./src/statics/* public/",
+    "clean": "rm -Rf public",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",

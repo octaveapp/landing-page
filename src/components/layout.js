@@ -1,49 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Footer from './footer'
 import './commons/styles/knacss.css'
 import './commons/styles/layout.css'
 import './commons/styles/octave-font.css'
-const Layout = ({ children, hideCallToAction }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-            description
-            keywords
-          }
-        }
-      }
-    `}
-    render={data => {
-      const { title, description, keywords } = data.site.siteMetadata
-      return (
-        <>
-          <Helmet
-            title={title}
-            meta={[
-              { name: 'description', content: description },
-              { name: 'keywords', content: keywords },
-            ]}
-          >
-            <base href={process.env.BASE_URL} />
-            <html lang="fr" />
-            {process.env.NODE_ENV === 'production' &&
-              hotJarAndGoogleAnalyticsTags()}
-          </Helmet>
-          <Header siteTitle={title} hideCallToAction={hideCallToAction} />
-          {children}
-          <Footer />
-        </>
-      )
-    }}
-  />
+const Layout = ({
+  children,
+  title,
+  description,
+  keywords,
+  hideCallToAction,
+}) => (
+  <>
+    <Helmet
+      title={title}
+      meta={[
+        { name: 'description', content: description },
+        { name: 'keywords', content: keywords },
+      ]}
+    >
+      <base href={process.env.BASE_URL} />
+      <html lang="fr" />
+      {process.env.NODE_ENV === 'production' && hotJarAndGoogleAnalyticsTags()}
+    </Helmet>
+    <Header siteTitle={title} hideCallToAction={hideCallToAction} />
+    {children}
+    <Footer />
+  </>
 )
 
 function hotJarAndGoogleAnalyticsTags() {

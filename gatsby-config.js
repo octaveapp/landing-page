@@ -1,9 +1,5 @@
 module.exports = {
   siteMetadata: {
-    title: 'Octave App',
-    description:
-      "L'application mobile qui vous fait gagner un temps précieux dans votre cuisine et pour vos courses",
-    keywords: 'Famille, Manger sain, Equilibre alimentaire, Application',
     siteUrl: `https://www.octaveapp.fr`,
   },
   pathPrefix: '/',

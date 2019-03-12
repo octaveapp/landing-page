@@ -52,7 +52,7 @@ export default () => (
       </Oli>
       <Oli Icon={RedDot}>
         Informations sur la qualité de votre panier et conseils sur les produits
-        qui le constitue pour faire les bons choix
+        qui le constituent pour faire les bons choix
       </Oli>
       <Oli Icon={RedDot}>
         Ajout de produits - alimentaires ou non-alimentaires - à votre liste
@@ -64,7 +64,7 @@ export default () => (
       alt="Une tablette sur un plan de travail dans la cuisine entourée de fruits et légumes, d'un couteau et d'huile d'olive"
     >
       <Oli Icon={BlueDot}>
-        Recettes disponibles dans l'application avec les étapes pas à pas
+        Disponibilité des recettes dans l'application avec les étapes pas à pas
         expliquées simplement et clairement
       </Oli>
       <Oli Icon={BlueDot}>

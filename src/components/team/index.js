@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Gerald from '../../images/gerald.jpg'
 import Ag from '../../images/ag.jpg'
-import Mathieu from '../../images/mathieu.jpg'
+// import Mathieu from '../../images/mathieu.jpg'
 import CallToAction from '../commons/call-to-action'
 import Paragraph from '../commons/paragraph'
 
@@ -40,8 +40,8 @@ export default () => (
       le monde
     </Paragraph>
     <div className="grid-12 has-gutter">
-      <TeamMember avatar={Gerald} firstname="Gérald" job="Co-fondateur" />
-      <TeamMember avatar={Mathieu} firstname="Mathieu" job="Co-fondateur" />
+      <TeamMember avatar={Gerald} firstname="Gérald" job="Produit & développement" />
+      {/* <TeamMember avatar={Mathieu} firstname="Mathieu" job="Co-fondateur" /> */}
       <TeamMember
         avatar={Ag}
         firstname="Anne-Gaëlle"

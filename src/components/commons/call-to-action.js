@@ -85,7 +85,7 @@ const Button = styled.a`
   }
 `
 export default ({ children, className }) => (
-  <Button href="signup" className={className}>
+  <Button href="/signup" className={className}>
     {children}
   </Button>
 )

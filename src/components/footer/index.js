@@ -63,13 +63,13 @@ export default () => (
       <div className="col-6-small-all links">
         <a href="/">Accueil</a>
         <br />
-        <a href="team">L’équipe</a>
+        <a href="/team">L’équipe</a>
         <br />
-        <a href="signup">Inscription</a>
+        <a href="/signup">Inscription</a>
         <br />
         <a href="mailto:contact@octaveapp.fr">Contact</a>
         <br />
-        <a href="confidentiality">Politique de confidentialité</a>
+        <a href="/confidentiality">Politique de confidentialité</a>
       </div>
     </div>
   </Footer>

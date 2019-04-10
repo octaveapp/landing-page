@@ -41,7 +41,6 @@ export default () => (
     </Paragraph>
     <div className="grid-12 has-gutter">
       <TeamMember avatar={Gerald} firstname="Gérald" job="Produit & développement" />
-      {/* <TeamMember avatar={Mathieu} firstname="Mathieu" job="Co-fondateur" /> */}
       <TeamMember
         avatar={Ag}
         firstname="Anne-Gaëlle"

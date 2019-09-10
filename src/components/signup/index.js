@@ -32,7 +32,7 @@ const Form = styled.form`
 
 const SignUpForm = () => (
   <Section>
-    <h3>Utilisez Octave en avant première</h3>
+    <h3 style={{ marginTop: '12rem', }}>Utilisez Octave en avant première</h3>
     <Paragraph>
       Vous cherchez à améliorer votre alimentation ? A simplifier votre
       quotidien ? Inscrivez-vous pour faire partie des premiers utilisateurs

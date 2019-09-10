@@ -7,7 +7,7 @@ import CallToAction from '../../commons/call-to-action'
 
 const Root = styled.div`
   margin-bottom: 20rem;
-  padding: 2rem 0;
+  padding: 12rem 0 2rem 0;
   background: #6cc566 url('${Pattern}') no-repeat bottom left;
   background-size: 20%;
   text-align: center;

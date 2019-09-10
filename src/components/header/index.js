@@ -9,6 +9,10 @@ import Menu from './menu'
 const Header = styled.header`
   background-color: #6cc566;
   padding: 2rem 0 2rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   .row {
     display: flex;
     justify-content: space-between;
